@@ -2,7 +2,7 @@
 ## My dotfiles for archlinux-hyprland
 This is a collection of my dotfiles for Arch Linux with Hyprland.It based on [JaKooLit's dotfiles](https://github.com/JaKooLit/Hyprland-Dots/tree/main).
 
-![./display.png]()
+![](./display.png)
 
 ## Installation
 Just clone the repository,overwrite the .config folder with the config in this repo. 
