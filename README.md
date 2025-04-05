@@ -37,3 +37,4 @@ If you don't need them,just don't install them and delete the config files.
 ## Todo
 - Permanently solve the problem that the Chinese input method can't be used in some apps,such as Chrome、vscode...
 - Add more scripts to make it more convenient to use.
+- Make a install.sh
