@@ -241,6 +241,10 @@ ${MAGENTA} NOTE:${RESET}
   esac
 done
 
+# Check if fcitx5 is installed and add fcitx5 on Startup
+if command -v fcitx5 >/dev/null 2>&1; then
+    sed -i '/^\s*#exec-once = fcitx5 --replace -d/s/^#//' config/hypr/UserConfigs/Startup_Apps.conf
+
 # Check if asusctl is installed and add rog-control-center on Startup
 if command -v asusctl >/dev/null 2>&1; then
     sed -i '/^\s*#exec-once = rog-control-center/s/^#//' config/hypr/UserConfigs/Startup_Apps.conf
@@ -683,22 +687,27 @@ done
 printf "\n%.0s" {1..1}
 
 
-# Copying configs for new apps,such as fcitx,yazi...
-DIR_new=" fcitx/dbus fcitx5 neofetch yazi"
+# Copying configs for new apps, such as fcitx, yazi...
+DIR_new="fcitx/dbus fcitx5 neofetch yazi"
 for DIR_NAME in $DIR_new; do
   DIRPATH="$HOME/.config/$DIR_NAME"
   
-  # Copy the new config
-  if [ -d "config/$DIR_NAME" ]; then
-    cp -r "config/$DIR_NAME/" "$HOME/.config/$DIR_NAME" 2>&1 | tee -a "$LOG"
-    if [ $? -eq 0 ]; then
-      echo "${OK} - Copy of config for ${YELLOW}$DIR_NAME${RESET} completed!"
+  # Check if the directory exists locally
+  if [ -d "$DIRPATH" ]; then
+    # Copy the new config
+    if [ -d "config/$DIR_NAME" ]; then
+      cp -r "config/$DIR_NAME/" "$DIRPATH" 2>&1 | tee -a "$LOG"
+      if [ $? -eq 0 ]; then
+        echo "${OK} - Copy of config for ${YELLOW}$DIR_NAME${RESET} completed!"
+      else
+        echo "${ERROR} - Failed to copy $DIR_NAME."
+        exit 1
+      fi
     else
-      echo "${ERROR} - Failed to copy $DIR_NAME."
-      exit 1
+      echo "${ERROR} - Directory config/$DIR_NAME does not exist to copy."
     fi
   else
-    echo "${ERROR} - Directory config/$DIR_NAME does not exist to copy."
+    echo "${NOTE} - Skipping ${YELLOW}$DIR_NAME${RESET} as it does not exist locally."
   fi
 done
 
