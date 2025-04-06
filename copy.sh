@@ -472,7 +472,7 @@ fi
 
 printf "${INFO} - copying dotfiles ${SKY_BLUE}first${RESET} part\n"
 # Config directories which will ask the user whether to replace or not
-DIRS="ags fastfetch kitty rofi swaync fcitx/dbus fcitx5 neofetch yazi"
+DIRS="ags fastfetch kitty rofi swaync"
 
 for DIR2 in $DIRS; do
   DIRPATH="$HOME/.config/$DIR2"
@@ -531,6 +531,7 @@ for DIR2 in $DIRS; do
 done
 
 printf "\n%.0s" {1..1}
+
 
 # for waybar special part since it contains symlink
 DIRW="waybar"
@@ -680,6 +681,27 @@ for DIR_NAME in $DIR; do
 done
 
 printf "\n%.0s" {1..1}
+
+
+# Copying configs for new apps,such as fcitx,yazi...
+DIR_new=" fcitx/dbus fcitx5 neofetch yazi"
+for DIR_NAME in $DIR_new; do
+  DIRPATH="$HOME/.config/$DIR_NAME"
+  
+  # Copy the new config
+  if [ -d "config/$DIR_NAME" ]; then
+    cp -r "config/$DIR_NAME/" "$HOME/.config/$DIR_NAME" 2>&1 | tee -a "$LOG"
+    if [ $? -eq 0 ]; then
+      echo "${OK} - Copy of config for ${YELLOW}$DIR_NAME${RESET} completed!"
+    else
+      echo "${ERROR} - Failed to copy $DIR_NAME."
+      exit 1
+    fi
+  else
+    echo "${ERROR} - Directory config/$DIR_NAME does not exist to copy."
+  fi
+done
+
 
 # Restore automatically Animations and Monitor-Profiles
 # including monitors.conf and workspaces.conf
