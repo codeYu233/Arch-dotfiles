@@ -1,11 +1,10 @@
 #!/bin/bash
-# /* ---- 💫 https://github.com/JaKooLit 💫 ---- */  #
 
 clear
 wallpaper=$HOME/.config/hypr/wallpaper_effects/.wallpaper_current
-waybar_style="$HOME/.config/waybar/style/[Extra] Modern-Combined - Transparent.css"
-waybar_config="$HOME/.config/waybar/configs/[TOP] Default"
-waybar_config_laptop="$HOME/.config/waybar/configs/[TOP] Default Laptop" 
+waybar_style="$HOME/.config/waybar/style/[Extra] Rose Pine.css"
+mbined - Transparent.cssnfig="$HOME/.config/waybar/configs/[TOP] Peony"
+waybar_config_laptop="$HOME/.config/waybar/configs/[TOP] Peony" 
 
 # Set some colors for output messages
 OK="$(tput setaf 2)[OK]$(tput sgr0)"
@@ -56,16 +55,15 @@ fi
 
 printf "\n%.0s" {1..1}  
 echo -e "\e[35m
-    ╦╔═┌─┐┌─┐╦    ╔╦╗┌─┐┌┬┐┌─┐
-    ╠╩╗│ ││ │║     ║║│ │ │ └─┐ 2025
-    ╩ ╩└─┘└─┘╩═╝  ═╩╝└─┘ ┴ └─┘
+        ╔╦╗┌─┐┌┬┐┌─┐
+         ║║│ │ │ └─┐ 2025
+        ═╩╝└─┘ ┴ └─┘
 \e[0m"
 printf "\n%.0s" {1..1}  
 
 ####### Announcement
 echo "${WARNING}A T T E N T I O N !${RESET}"
 echo "${SKY_BLUE}This version (v2.3.13) no extra packages!${RESET}"
-echo "${SKY_BLUE}If you ran through (Distro-Hyprland install scripts), no need to do anything${RESET}"
 echo "${YELLOW}previous version: nwg-displays & Some Keybinds changes${RESET}"
 printf "\n%.0s" {1..1}
 
@@ -474,7 +472,7 @@ fi
 
 printf "${INFO} - copying dotfiles ${SKY_BLUE}first${RESET} part\n"
 # Config directories which will ask the user whether to replace or not
-DIRS="ags fastfetch kitty rofi swaync"
+DIRS="ags fastfetch kitty rofi swaync fcitx/dbus fcitx5 neofetch yazi"
 
 for DIR2 in $DIRS; do
   DIRPATH="$HOME/.config/$DIR2"
