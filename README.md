@@ -11,6 +11,7 @@ If you are looking for the auto-install.sh,click here [codeyu233's Arch-Hyprland
 
 ## Installation
 Just clone the repository,overwrite the .config folder with the config in this repo. 
+Or you can run the copy.sh
 
 ## What apps may you need?
 - JaKooLit's Hyprland
