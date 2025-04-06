@@ -41,11 +41,11 @@ if grep -iq '^\(ID_LIKE\|ID\)=.*\(debian\|ubuntu\)' /etc/os-release >/dev/null 2
 	printf "\n%.0s" {1..1}
     print_color $WARNING "
     █▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀█
-                 KOOL DOTS version INCOMPATIBLE
+                 codeyu233 DOTS version INCOMPATIBLE
     █▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄█
 
     Debian / Ubuntu detected. Refer to Hyprland-Dots README
-    For instruction on how to update your KooL Hyprland Dots
+    For instruction on how to update your Hyprland Dots
 
     exiting ....
     "
@@ -67,7 +67,6 @@ echo "${WARNING}A T T E N T I O N !${RESET}"
 echo "${SKY_BLUE}This version (v2.3.13) no extra packages!${RESET}"
 echo "${SKY_BLUE}If you ran through (Distro-Hyprland install scripts), no need to do anything${RESET}"
 echo "${YELLOW}previous version: nwg-displays & Some Keybinds changes${RESET}"
-echo "${MAGENTA}Kindly visit KooL Hyprland Own Wiki for changelogs${RESET}"
 printf "\n%.0s" {1..1}
 
 # Create Directory for Copy Logs
@@ -300,7 +299,7 @@ printf "\n"
 
 # Action to do for better appearance
 while true; do
-  echo "${NOTE} ${SKY_BLUE} By default, KooL's Dots are configured for 1440p or 2k."
+  echo "${NOTE} ${SKY_BLUE} By default, codeyu233's Dots are configured for 1440p or 2k."
   echo "${WARN} If you dont select proper resolution, Hyprlock will look FUNKY!"
   echo "${INFO} If you are not sure what is your resolution, choose 1 here!"
   echo "${MAGENTA}Select monitor resolution to properly configure appearance and fonts:"
@@ -353,7 +352,7 @@ printf "\n%.0s" {1..1}
 
 # Ask whether to change to 12hr format
 while true; do
-    echo -e "${NOTE} ${SKY_BLUE} By default, KooL's Dots are configured in 24H clock format."
+    echo -e "${NOTE} ${SKY_BLUE} By default, codeyu233's Dots are configured in 24H clock format."
     echo -n "$CAT Do you want to change to 12H (AM/PM) clock format? (y/n): "
     read answer
 
@@ -752,7 +751,6 @@ if [ -d "$BACKUP_DIR_PATH" ]; then
     If you decide to restore your old configs, make sure to
     handle the updates or changes manually !!!
     "
-	echo -e "${MAGENTA}Kindly Visit and check KooL's Hyprland-Dots GitHub page for the history of commits.${RESET}"
 
 
   for FILE_NAME in "${FILES_TO_RESTORE[@]}"; do
@@ -1046,9 +1044,9 @@ printf "\n%.0s" {1..1}
 wallust run -s $wallpaper 2>&1 | tee -a "$LOG"
 
 printf "\n%.0s" {1..2}
-printf "${OK} GREAT! KooL's Hyprland-Dots is now Loaded & Ready !!! "
+printf "${OK} GREAT! codeyu233's Hyprland-Dots is now Loaded & Ready !!! "
 printf "\n%.0s" {1..1}
 printf "${INFO} However, it is ${MAGENTA}HIGHLY SUGGESTED${RESET} to logout and re-login or better reboot to avoid any issues"
 printf "\n%.0s" {1..1}
-printf "${SKY_BLUE}Thank you${RESET} for using ${MAGENTA}KooL's Hyprland Configuration${RESET}... ${YELLOW}ENJOY!!!${RESET}"
+printf "${SKY_BLUE}Thank you${RESET} for using ${MAGENTA}codeyu233's Hyprland Configuration${RESET}... ${YELLOW}ENJOY!!!${RESET}"
 printf "\n%.0s" {1..3}
