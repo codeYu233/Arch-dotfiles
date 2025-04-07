@@ -3,7 +3,7 @@
 clear
 wallpaper=$HOME/.config/hypr/wallpaper_effects/.wallpaper_current
 waybar_style="$HOME/.config/waybar/style/[Extra] Rose Pine.css"
-mbined - Transparent.cssnfig="$HOME/.config/waybar/configs/[TOP] Peony"
+waybar_config="$HOME/.config/waybar/configs/[TOP] Peony"
 waybar_config_laptop="$HOME/.config/waybar/configs/[TOP] Peony" 
 
 # Set some colors for output messages
