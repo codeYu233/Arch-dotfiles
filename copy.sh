@@ -244,6 +244,7 @@ done
 # Check if fcitx5 is installed and add fcitx5 on Startup
 if command -v fcitx5 >/dev/null 2>&1; then
     sed -i '/^\s*#exec-once = fcitx5 --replace -d/s/^#//' config/hypr/UserConfigs/Startup_Apps.conf
+fi
 
 # Check if asusctl is installed and add rog-control-center on Startup
 if command -v asusctl >/dev/null 2>&1; then
