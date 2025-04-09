@@ -20,7 +20,7 @@ Or you can run the copy.sh
 - neovide
 - lunarvim
 > [!CAUTION]
-> If you are using the nvim-treesitter,there are something wrong with the "hyprlang" parser,plase add "lvim.builtin.treesitter.ignore_install={"hyprlang"}" to your "config.lua" and run :TSUninstall hyprlang to make sure you can edit the .conf documents.  
+> If you are using the nvim-treesitter,there are something wrong with the "hyprlang" parser, plase add "lvim.builtin.treesitter.ignore_install={"hyprlang"}" to your "config.lua" and run ":TSUninstall hyprlang" to make sure you can edit the .conf documents.  
 - yazi
 - fcitx5、rime
 - neofetch
