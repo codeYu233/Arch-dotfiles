@@ -11,11 +11,10 @@ If you are looking for the auto-install.sh,click here [codeyu233's Arch-Hyprland
 
 ## Installation
 Just clone the repository,overwrite the .config folder with the config in this repo. 
-Or you can run the copy.sh
+Or you can run the copy.sh.
+Watch out,you need to change "xxx" into your "username" in neofetch's config to make sure your own ascii image run well.
 
 ## What apps may you need?
-- JaKooLit's Hyprland
-   
 - nvim
 - neovide
 - lunarvim
@@ -25,15 +24,15 @@ Or you can run the copy.sh
 - fcitx5、rime
 - neofetch
 - autojump
+- fish
 
 ## What's in the repo?
-The dotfiles support Chinese input method(based on fcitx5、rime).I've changed some colors and added some scripts to make it more convenient and beautiful to use.
+The dotfiles support Chinese input method(based on fcitx5、rime).I've changed some colors and added some scripts to make it more convenient and beautiful to use.The shell has also been changed into fish(starship) from zsh(oh-my-zsh).
 
 ## How to make it looks like mine?
 1. Use the wallpaper in the `wallpapers` folder.
 2. Choose the "Rose Pine" theme for waybar
 3. Use the "Peony" layout for waybar
-4. Use the zsh、oh-my-zsh、nvim-lunarvim
 
 ## Tips
 Don't like my settings?

@@ -689,7 +689,7 @@ printf "\n%.0s" {1..1}
 
 
 # Copying configs for new apps, such as fcitx, yazi...
-DIR_new="fcitx/dbus fcitx5 neofetch yazi"
+DIR_new="fcitx/dbus fcitx5 neofetch yazi fish"
 for DIR_NAME in $DIR_new; do
   DIRPATH="$HOME/.config/$DIR_NAME"
   
